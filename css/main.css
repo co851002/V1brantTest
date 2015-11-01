@@ -1,0 +1,530 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,canvas,iframe,img,svg,video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+    margin: .2em 0;
+    background: #ccc;
+    color: #000;
+    padding: .2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,.clearfix:after {
+    content: " ";
+/* 1 */
+    display: table;
+/* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+                                    Custom CSS
+   ========================================================================== */
+body.home-page {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.home-page .logo {
+    width: 170px;
+}
+
+.home-page section {
+    width: 100%;
+}
+
+.home-page .caption a {
+/* font-weight: 600; */
+    font-size: inherit;
+    text-decoration: underline;
+    color: green;
+}
+
+.home-page .page-header {
+    text-align: center;
+}
+
+body {
+    max-width: 70%;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+/* display: block; */
+/* width: 100%; */
+/* height: 100%; */
+/* position: absolute; */
+/* min-height: 100%; */
+/* left: 50%; */
+/* margin-left: -600px; */
+}
+
+header {
+    border-bottom: 1px solid #fff;
+}
+
+.logo {
+    width: 270px;
+    position: relative;
+    height: 154px;
+/* left: 50%; */
+/* margin-left: -130px; */
+    margin: 0 auto;
+}
+
+section {
+    width: 75%;
+/* background: red; */
+    float: left;
+    margin: 0 auto;
+    position: relative;
+}
+
+aside {
+    width: 25%;
+/* background: blue; */
+    color: #fff;
+    padding-top: 50px;
+    float: left;
+}
+
+footer {
+    position: relative;
+/* bottom: 0px; */
+/* display: block; */
+/* background: green; */
+/* max-width: 1200px; */
+/* border-top: 1px solid #fff; */
+}
+
+#player {
+    display: inline-block;
+    width: 95%;
+    height: 560px;
+/*background: url(../img/video1.jpg) no-repeat;*/
+    background-size: contain;
+    position: relative;
+/* margin: 0 auto; */
+/*left: 50%;*/
+/*margin-left: -320px;*/
+    margin-top: 50px;
+    position: relative;
+}
+
+button.playButton {
+    position: absolute !important;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    left: 50%;
+    font-size: 28px;
+    border: none;
+    border-radius: 50px;
+/* text-indent: -9999em; */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+48&amp;1+0,0+63 */
+    background: -moz-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+/* FF3.6+ */
+    background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,rgba(0,0,0,1)),color-stop(48%,rgba(0,0,0,0.24)),color-stop(63%,rgba(0,0,0,0)));
+/* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+/* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+/* Opera 12+ */
+    background: -ms-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+/* IE10+ */
+    background: radial-gradient(ellipse at center,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+/* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#00000000',GradientType=1);
+/* IE6-9 fallback on horizontal gradient */
+    width: 100px;
+    height: 100px;
+}
+
+#player button.playButton {
+    position: relative;
+}
+
+.video2 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 45px;
+}
+
+.video1 {
+    width: auto;
+    height: 230px;
+    position: relative;
+    background: url(../img/video1.jpg) no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+.video2 {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    background: url(../img/video3.jpg) no-repeat;
+    background-size: contain;
+}
+
+.video3 {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    background: url(../img/video2.jpg) no-repeat;
+    background-size: contain;
+}
+
+.video2 a,.video1 a,.video3 a {
+    position: absolute !important;
+/* top: 50%; */
+/* margin-left: -50px; */
+    margin-top: 0;
+/* left: 50%; */
+    font-size: 28px;
+    border: none;
+    border-radius: 50px;
+/* text-indent: -9999em; */
+    background: -moz-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+    background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,rgba(0,0,0,1)),color-stop(48%,rgba(0,0,0,0.24)),color-stop(63%,rgba(0,0,0,0)));
+    background: -webkit-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+    background: -o-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+    background: -ms-radial-gradient(center,ellipse cover,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+    background: radial-gradient(ellipse at center,rgba(0,0,0,1) 0%,rgba(0,0,0,0.24) 48%,rgba(0,0,0,0) 63%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#00000000',GradientType=1);
+    width: 100%;
+    height: 88%;
+}
+
+aside i.fa.fa-play {
+    margin-left: -12px;
+    left: 50%;
+    margin-top: 27%;
+    position: absolute;
+    display: block;
+}
+
+ul.footerLinks {
+    list-style-type: none;
+/* border-top: 1px solid #fff; */
+/* width: 100%; */
+/* position: absolute; */
+/* clear: both; */
+    left: 0;
+}
+
+.footerLinks li {
+    float: left;
+    width: 20%;
+    position: relative;
+    text-align: center;
+/* border-top: 1px solid #fff; */
+}
+
+.footerLinks li a {
+    color: #474747;
+}
+
+.footerLinks li a:hover {
+    color: #9F9F9F;
+}
+
+.ytp-title {
+    display: none !important;
+}
+
+.ytp-title-link,.ytp-title-channel-name {
+    display: none !important;
+}
+
+.mydivshow {
+    display: none;
+}
+
+div#sideVideo span {
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    font-size: 18px;
+}
+
+#player span {
+    position: absolute;
+    bottom: 0;
+}
+
+#player a {
+    font-size: 28px;
+/* text-transform: uppercase; */
+/* font-style: oblique; */
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#player a:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: red;
+    position: relative;
+    bottom: 0;
+}
+
+a.linkOut {
+    position: relative;
+/* width: 400px; */
+    height: 82px;
+    display: block;
+    font-size: 53px;
+    margin-top: 40px;
+    font-weight: 100;
+/* font-family: 'Satisfy', cursive; */
+    font-family: 'Dancing Script',cursive;
+}
+
+#sideVideo a:hover {
+/* color: #242424; */
+    background: transparent;
+}
+
+a.linkOut:hover {
+    font-size: 54px;
+}
+
+.fancybox-close {
+    position: absolute;
+    top: 30px !important;
+    right: 30px !important;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 8040;
+}
+
+.fancybox-wrap.fancybox-desktop.fancybox-type-iframe.fancybox-opened {
+/* position: absolute!important; */
+/* top: auto!important; */
+/* overflow: hidden!important; */
+/* height: 100%!important; */
+/* left: 0!important; */
+/* top: 0!important; */
+}
+
+.fancybox-inner {
+/*height: 100%!important;*/
+}
+
+.fancybox-skin {
+/*height: 100%!important;*/
+}
+
+.fancybox-outer {
+/*  height: 100%;*/
+}
+
+.fancybox-lock .fancybox-overlay {
+/*overflow: auto;*/
+/* overflow-y: auto!important;*/
+}
+
+a.fancybox-item.fancybox-close:hover {
+    zoom: 1.1;
+    top: 25px !important;
+    right: 25px !important;
+}
+
+a.linkOut span {
+    position: absolute;
+    display: block;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+/* Style adjustments for viewports that meet the condition */
+
+}
+
+@media print,(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 1.25dppx),(min-resolution: 120dpi) {
+/* Style adjustments for high resolution devices */
+
+}
+
+@media only screen and (max-width: 1440px) {
+section {
+    width: 100%;
+/* background: red; */
+    float: none;
+    position: relative;
+}
+
+aside {
+    width: 100%;
+    padding-top: 0;
+    float: none;
+/* position: relative; */
+    margin: 0 auto;
+}
+
+#player {
+    width: 100%;
+}
+
+aside i.fa.fa-play {
+    margin-top: 27%;
+}
+
+div#sideVideo {
+/* padding: 20px; */
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+}
+}
+
+@media only screen and (max-width: 840px) {
+.footerLinks li {
+    float: none;
+    width: 100%;
+    }

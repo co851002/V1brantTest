@@ -1,0 +1,125 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+        <div class="logo"><a href="index.html"><img src="img/cartier-logo.png"></a></div>
+            
+        </header>
+
+        <section>
+
+        <div id="player"><button class="playButton" onclick="playMe()"><i class="fa fa-play"></i></button>
+        
+        </div>
+        <!-- This loads the YouTube IFrame Player API code -->
+        <script src="http://www.youtube.com/player_api"></script>
+        <script>
+        var tag = document.createElement('script');
+        tag.src = "http://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var done = false;
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+              height: '890',
+              width: '640',
+              videoId: 'yaBNjTtCxd4',
+              playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'playsinline': 0, 'fs': 1, 'enablejsapi': 1},
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+        }
+        function onPlayerReady(evt) {
+            setTimeout(function() {
+            evt.target.playVideo(  );
+                }, 1000);
+
+        }
+        function onPlayerStateChange(evt) {
+            if (evt.data == YT.PlayerState.PLAYING && !done) {
+
+                
+                done = true;
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+
+        function loadVideo(videoID) {
+          if(player) { player.loadVideoById(videoID); }
+        }
+        var loadInfo = function (videoId) {
+            var gdata = document.createElement("script");
+            gdata.src = "http://gdata.youtube.com/feeds/api/videos/" + videoId + "?v=2&alt=jsonc&callback=storeInfo";
+            var body = document.getElementsByTagName("body")[0];
+            body.appendChild(gdata);
+        };
+
+        var storeInfo = function (info) {
+            console.log(info.data.title);
+        };
+
+        </script>
+
+       <a class="linkOut" href="http://www.cartier.co.uk/" target="_parent"><span>View the collection</span></a>
+
+        </section>
+        <aside>
+
+        <div id="sideVideo" class="video1">
+        <a href="javascript:loadVideo('yaBNjTtCxd4');"><i class="fa fa-play"></i><span>L'Odyssée de Cartier</span></a>
+        </div>
+
+        <div id="sideVideo" class="video2">
+        <a href="javascript:loadVideo('n9AZUAYLFKg');"><i class="fa fa-play"></i><span>The Proposal</span></a>
+        </div>
+
+        <div id="sideVideo" class="video3">
+        <a href="javascript:loadVideo('FNtZ3pPun3Y');"><i class="fa fa-play"></i><span>Shape Your Time</span></a>
+        </div>
+
+        </aside>
+
+        <footer>
+            <ul class="footerLinks">
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Credits</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </footer>
+        </body>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+       
+    </body>
+</html>
